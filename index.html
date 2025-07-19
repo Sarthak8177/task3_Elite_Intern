@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Approval Prediction</title>
+</head>
+<body>
+    <h1>Loan Approval Form</h1>
+    <form method="POST">
+        Gender:
+        <select name="Gender">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select><br><br>
+
+        Married:
+        <select name="Married">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        Dependents:
+        <select name="Dependents">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3+</option>
+        </select><br><br>
+
+        Education:
+        <select name="Education">
+            <option value="0">Graduate</option>
+            <option value="1">Not Graduate</option>
+        </select><br><br>
+
+        Self Employed:
+        <select name="Self_Employed">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        Applicant Income:
+        <input type="number" name="ApplicantIncome" required><br><br>
+
+        Coapplicant Income:
+        <input type="number" name="CoapplicantIncome" required><br><br>
+
+        Loan Amount (in thousands):
+        <input type="number" name="LoanAmount" required><br><br>
+
+        Loan Term (months):
+        <input type="number" name="Loan_Amount_Term" required><br><br>
+
+        Credit History:
+        <select name="Credit_History">
+            <option value="1">Good</option>
+            <option value="0">Bad</option>
+        </select><br><br>
+
+        Property Area:
+        <select name="Property_Area">
+            <option value="0">Rural</option>
+            <option value="1">Semiurban</option>
+            <option value="2">Urban</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
+
